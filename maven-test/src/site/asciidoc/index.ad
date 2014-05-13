@@ -1,0 +1,33 @@
+:sectanchors:
+:icons: font
+:source-highlighter: pygments
+
+== Useful Maven commands
+
+Here's a list of some useful maven commands.
+
+=== Release a new version
+To prepare a new release
+
+[source,bash]
+----
+ mvn clean install -Pdeploy,jetty,uat
+----
+
+NOTE: Please be patient - the first build might take even an hour
+
+=== Tidy your poms
+Another useful maven plugin is the Tidy plugin.
+
+[source,xml]
+----
+<?xml version="1.0" encoding="UTF-8"?>
+<settings>
+	<servers>
+		<server>
+		</server>
+	</servers>
+</settings>
+----
+
+
